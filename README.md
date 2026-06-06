@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Powered College Discovery Platform
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The College Discovery Platform is a full-stack web application that helps students discover engineering colleges, compare institutions, and receive personalized college and branch recommendations based on rank, preferences, and career goals.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The platform combines modern web technologies with a recommendation engine to simplify college selection and decision-making.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### College Discovery
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Browse engineering colleges
+* Search colleges by name and location
+* View detailed college profiles
 
-## Learn More
+### AI College Predictor
 
-To learn more about Next.js, take a look at the following resources:
+* Rank-based recommendations
+* Branch preference matching
+* Goal-oriented suggestions
+* Dream / Target / Safe categorization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### College Comparison
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Side-by-side comparison
+* Fees comparison
+* Placement comparison
+* Rating comparison
 
-## Deploy on Vercel
+### College Profiles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* College details
+* Placement information
+* Cutoff information
+* Branch availability
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+### Frontend
+
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* Next.js API Routes
+* Prisma ORM
+
+### Database
+
+* PostgreSQL (Neon)
+
+### Deployment
+
+* Vercel
+
+## Architecture
+
+User → Next.js Frontend → API Routes → Prisma ORM → PostgreSQL
+
+## Future Enhancements
+
+* Real-world cutoff datasets
+* Category-wise predictions
+* State quota support
+* Placement analytics dashboard
+* AI-powered career recommendations
+
+## Live Demo
+https://college-discovery-platform-eight-gamma.vercel.app/
+
+## GitHub Repository
+https://github.com/Lakshman2405/college-discovery-platform.git
