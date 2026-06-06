@@ -82,19 +82,19 @@ Each college page includes:
 ## 🖼️ Screenshots
 ### Homepage
 
-![Homepage](public/screenshots/Homepage.png)
+![Homepage](public/Screenshots/Homepage.png)
 
 ### AI Predictor
 
-![Predictor](public/screenshots/Predictor.png)
+![Predictor](public/Screenshots/Predictor.png)
 
 ### College Comparison
 
-![Comparison](public/screenshots/Compare.png)
+![Comparison](public/Screenshots/Compare.png)
 
 ### College Details
 
-![College Details](public/screenshots/CollegeDetail.png)
+![College Details](public/Screenshots/CollegeDetail.png)
 
 ---
 
