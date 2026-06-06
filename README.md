@@ -80,7 +80,6 @@ Each college page includes:
 ---
 
 ## 🖼️ Screenshots
-
 ### Homepage
 
 ![Homepage](public/screenshots/Homepage.png)
