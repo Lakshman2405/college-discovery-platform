@@ -6,9 +6,9 @@ A modern full-stack web application that helps students discover engineering col
 
 ## 🚀 Live Demo
 
-**Deployment:** [Add your Vercel URL here]
+**Deployment:** [https://college-discovery-platform-eight-gamma.vercel.app/]
 
-**GitHub Repository:** [Add your GitHub URL here]
+**GitHub Repository:** [https://github.com/Lakshman2405/college-discovery-platform]
 
 ---
 
