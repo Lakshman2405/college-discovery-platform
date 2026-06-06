@@ -1,15 +1,9 @@
 import SearchBar from "./components/SearchBar";
 import Link from "next/link";
+import { prisma } from "@/lib/prisma";
 
 async function getColleges() {
-  const res = await fetch(
-    "http://localhost:3000/api/colleges",
-    {
-      cache: "no-store",
-    }
-  );
-
-  return res.json();
+  return await prisma.college.findMany();
 }
 
 export default async function Home() {
