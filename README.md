@@ -248,7 +248,7 @@ Production deployment automatically rebuilds whenever changes are pushed to GitH
 
 ## 👨‍💻 Developer
 
-**Lakshman Guru Ssai**
+**Sikhakolli Lakshman Guru Sai**
 
 Built as a full-stack engineering project using modern web technologies and database-driven recommendation systems.
 
