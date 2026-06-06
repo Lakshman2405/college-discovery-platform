@@ -1,65 +1,144 @@
-import Image from "next/image";
+import SearchBar from "./components/SearchBar";
+import Link from "next/link";
 
-export default function Home() {
+async function getColleges() {
+  const res = await fetch(
+    "http://localhost:3000/api/colleges",
+    {
+      cache: "no-store",
+    }
+  );
+
+  return res.json();
+}
+
+export default async function Home() {
+  const colleges = await getColleges();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-8 py-12">
+
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-6xl font-extrabold text-white mb-4">
+            Find Your Perfect Engineering College
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            AI-powered college discovery platform for exploring colleges,
+            comparing options, and predicting the best college & branch
+            combinations based on your rank and career goals.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        {/* Action Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <Link
+            href="/predictor"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            🤖 AI Predictor
+          </Link>
+
+          <Link
+            href="/compare"
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition"
           >
-            Documentation
-          </a>
+            ⚖️ Compare Colleges
+          </Link>
         </div>
-      </main>
-    </div>
+
+        {/* Stats Section */}
+        <div className="grid md:grid-cols-4 gap-6 mb-12">
+          <div className="bg-white rounded-2xl p-6 shadow-xl text-center">
+            <h2 className="text-4xl font-bold text-blue-600">
+              {colleges.length}+
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Colleges
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-xl text-center">
+            <h2 className="text-4xl font-bold text-green-600">
+              50+
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Branches
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-xl text-center">
+            <h2 className="text-4xl font-bold text-purple-600">
+              AI
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Prediction Engine
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-xl text-center">
+            <h2 className="text-4xl font-bold text-orange-600">
+              3
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Recommendation Levels
+            </p>
+          </div>
+        </div>
+
+        {/* Features */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-white rounded-2xl p-6 shadow-xl">
+            <div className="text-4xl mb-4">🔍</div>
+
+            <h3 className="text-xl font-bold text-black mb-2">
+              Discover Colleges
+            </h3>
+
+            <p className="text-gray-600">
+              Search and explore top engineering colleges with fees,
+              ratings, placements and detailed information.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-xl">
+            <div className="text-4xl mb-4">🤖</div>
+
+            <h3 className="text-xl font-bold text-black mb-2">
+              AI Recommendations
+            </h3>
+
+            <p className="text-gray-600">
+              Get personalized Dream, Target and Safe college
+              recommendations using rank and career preferences.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-xl">
+            <div className="text-4xl mb-4">⚖️</div>
+
+            <h3 className="text-xl font-bold text-black mb-2">
+              Compare Colleges
+            </h3>
+
+            <p className="text-gray-600">
+              Compare colleges side-by-side on fees, ratings,
+              placements and other important metrics.
+            </p>
+          </div>
+        </div>
+
+        {/* College Explorer */}
+        <div className="bg-white rounded-3xl p-8 shadow-2xl">
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Explore Colleges
+          </h2>
+
+          <SearchBar colleges={colleges} />
+        </div>
+      </div>
+    </main>
   );
 }
