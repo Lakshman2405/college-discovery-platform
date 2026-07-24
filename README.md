@@ -777,7 +777,7 @@ Each branch includes:
 ---
 
 ## Current Features
-
+```
 ✅ **College browsing** with real-time search
 ✅ **Detail pages** with branch analytics
 ✅ **Side-by-side comparison** of 2 colleges
@@ -788,11 +788,11 @@ Each branch includes:
 ✅ **Server & client components** (Next.js 16)
 ✅ **Type-safe queries** (TypeScript + Prisma)
 ✅ **Database seeding** (Prisma seed.ts)
-
+```
 ---
 
 ## What's Not Included (Future Work)
-
+```
 ❌ User authentication (NextAuth setup exists but not used)
 ❌ Save favorites to user account
 ❌ Student reviews/ratings
@@ -802,7 +802,7 @@ Each branch includes:
 ❌ Email notifications
 ❌ Real-time data updates
 ❌ Admin dashboard for data management
-
+```
 ---
 
 ## Deployment
